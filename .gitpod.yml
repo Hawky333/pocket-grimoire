@@ -1,0 +1,14 @@
+image: gitpod/workspace-full
+
+tasks:
+  - name: Install & build
+    init: |
+      git fetch origin pull/136/head:pr-136
+      git checkout pr-136
+      yarn install
+    command: yarn dev-server
+
+ports:
+  - port: 8080
+    onOpen: open-preview
+    visibility: public
