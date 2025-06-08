@@ -6,7 +6,7 @@ tasks:
       git fetch origin pull/136/head:pr-136
       git checkout pr-136
       yarn install
-    command: yarn dev-server --host
+    command: dev-server --host 0.0.0.0
 
 ports:
   - port: 8080
